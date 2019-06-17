@@ -11,6 +11,7 @@
 */
 Scene::Scene(const char* name) :name(name)
 {
+	std::cout << "Scene コンストラクタ:" << name << "/n";
 }
 
 /**
@@ -19,6 +20,7 @@ Scene::Scene(const char* name) :name(name)
 Scene::~Scene()
 {
 	Finalize();
+	std::cout << "Scene デストラクタ:" << name << "/n";
 }
 
 /**
@@ -27,6 +29,7 @@ Scene::~Scene()
 void Scene::Play()
 {
 	IsActive = true;
+	std::cout << "Scene Play:" << name << "/n";
 }
 
 /**
@@ -35,6 +38,7 @@ void Scene::Play()
 void Scene::Stop()
 {
 	IsActive = false;
+	std::cout << "Scene Stop:" << name << "/n";
 }
 
 /**
@@ -43,14 +47,16 @@ void Scene::Stop()
 void Scene::Show()
 {
 	IsVisible = true;
+	std::cout << "Scene Show:" << name << "/n";
 }
 
 /**
-* シーンを非表にする.
+* シーンを非表示にする.
 */
 void Scene::Hide()
 {
 	IsVisible = false;
+	std::cout << "Scene Hide:" << name << "/n";
 }
 
 /**
